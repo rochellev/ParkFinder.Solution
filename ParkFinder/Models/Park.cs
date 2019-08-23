@@ -28,14 +28,14 @@ namespace ParkFinder.Models
 
         public static List<Park> GetAllParksAsync()
         {
-            var client = new RestClient("https://localhost:5001/api/");
+            var client = new RestClient("http://localhost:5000/api/");
             var request = new RestRequest("parks", Method.GET);
             var response = new RestResponse();
             Task.Run(async () =>
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
-            JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
+            JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
             var parkList = JsonConvert.DeserializeObject<List<Park>>(jsonResponse.ToString());
             return parkList;
         }
