@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Park Index";
+}
+
+@model IEnumerable<ParkFinder.Models.Park>
+
+<div class="text-center">
+    <h1 class="display-4">View All Washington Parks</h1>
+</div>
+
+<div class="container">
+    @foreach (var park in Model)
+    {
+        <p>Name: @Html.DisplayFor(modelItem => park.Name)</p>
+    }
+</div>
