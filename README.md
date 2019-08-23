@@ -14,11 +14,11 @@
 
 ## Installation
 * Follow the following steps using the terminal
-* After running project, go to http://localhost:5000
+* After running project, go to http://localhost:5003
 
 ```sh
-$ git clone https://github.com/rochellev/ParksAPI.git
-$ cd ParksAPI
+$ git clone https://github.com/rochellev/ParkFinder.Solution.git
+$ cd ParkFinder.Solution/ParkFinder
 $ dotnet restore
 $ dotnet ef database update
 $ dotnet run
